@@ -12,4 +12,10 @@ public class HelloController {
     public String helloYou(@PathVariable String myName) {
         return "Hello " + myName;
     }
+
+    @GetMapping("/hello")
+    public String hello(@RequestParam(name = "myName"
+            , required = false) String myName) {
+        return "Greetings from Spring Boot!";
+    }
 }
